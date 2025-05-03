@@ -7,6 +7,7 @@ import os
 from urllib.parse import urljoin
 import traceback
 import sys
+import argparse
 
 # 设置请求头，模拟浏览器
 headers = {
@@ -300,13 +301,19 @@ def get_arknights_operators():
                     elif "否" in infected_value:
                         infected_text = "否"
                 
+                # 获取干员基础名称，用于合并不同职业形态的同一角色
+                base_name = name
+                if "（" in name and "）" in name:
+                    base_name = name.split("（")[0].strip()
+                
                 # 干员数据以名称为键
                 operators[name] = {
                     "星级": star_text,
                     "职业": profession_text,
                     "标签": tags_text,
                     "阵营": faction_text,
-                    "是否感染": infected_text
+                    "是否感染": infected_text,
+                    "基础名称": base_name  # 添加基础名称字段，用于后续合并
                 }
                 
                 print(f"成功提取干员: {name}")
@@ -364,7 +371,16 @@ def match_characters_with_operators(bangumi_chars, arknights_ops):
         "4星": "4star", "5星": "5star", "6星": "6star",
         "未知星级": "unknown"
     }
+    
+    # 预处理：创建基础名称到所有变体的映射
+    base_to_variants = {}
+    for op_name, op_data in arknights_ops.items():
+        base_name = op_data.get("基础名称", op_name)
+        if base_name not in base_to_variants:
+            base_to_variants[base_name] = []
+        base_to_variants[base_name].append(op_name)
 
+    # 处理每个Bangumi角色
     for char in bangumi_chars:
         name = char["name_cn"]
         char_id = char["id"]
@@ -373,126 +389,118 @@ def match_characters_with_operators(bangumi_chars, arknights_ops):
             
         name_to_id[name] = char_id
         
-        # 尝试直接匹配名称
+        # 初始化角色数据结构
+        character_data = {
+            "稀有度": {},
+            "职业": {},
+            "标签": {},
+            "阵营": {},
+            "是否感染": {}
+        }
+        
+        matched = False
+        matched_ops = []
+        
+        # 检查是否有完全匹配的名称
+        exact_match = None
         if name in arknights_ops:
-            op_data = arknights_ops[name]
-            
-            # 处理星级图片路径
-            star_value = op_data["星级"]
-            star_image = f"<img src='/assets/tag/arknights/Star_Rating/{star_mapping.get(star_value, 'unknown')}.png' alt='{star_value}' />"
-            
-            # 处理标签 - 拆分成多个键值对
-            tags = {}
-            if "/" in op_data["标签"]:
-                tag_list = op_data["标签"].split("/")
-                for tag in tag_list:
-                    if tag.strip():  # 确保标签不为空
-                        tags[tag.strip()] = tag.strip()
-            else:
-                # 如果没有分隔符，就使用整个标签
-                tags[op_data["标签"]] = op_data["标签"]
-            
-            # 处理阵营 - 拆分成多个键值对
-            factions = {}
-            if "," in op_data["阵营"] or "，" in op_data["阵营"]:
-                # 替换中文逗号为英文逗号，然后分割
-                faction_text = op_data["阵营"].replace("，", ",")
-                faction_list = faction_text.split(",")
-                for faction in faction_list:
-                    if faction.strip():  # 确保阵营不为空
-                        factions[faction.strip()] = faction.strip()
-            else:
-                # 如果没有分隔符，就使用整个阵营
-                factions[op_data["阵营"]] = op_data["阵营"]
-            
-            # 获取职业名称作为字段名
-            profession = op_data["职业"]
-            
-            result[char_id] = {
-                "稀有度": {
-                    op_data["星级"]: star_image
-                },
-                profession: {
-                    profession: f"<img src='/assets/tag/arknights/Occupation/{profession}.png' alt='{profession}' />"
-                },
-                "标签": tags,
-                "阵营": factions,
-                "是否感染": {
-                    op_data["是否感染"]: op_data["是否感染"]
-                }
-            }
+            exact_match = name
         else:
-            # 尝试模糊匹配
-            matched = False
+            # 检查是否是某个基础名称
+            for base_name, variants in base_to_variants.items():
+                if name == base_name:
+                    matched_ops.extend(variants)
+                    matched = True
+                    break
+                    
+        # 如果有精确匹配，使用它的所有变体
+        if exact_match:
+            base_name = arknights_ops[exact_match].get("基础名称", exact_match)
+            if base_name in base_to_variants:
+                matched_ops.extend(base_to_variants[base_name])
+                matched = True
+        
+        # 如果没有匹配到，尝试模糊匹配
+        if not matched:
             for op_name, op_data in arknights_ops.items():
                 # 检查名称是否包含或被包含
                 if name in op_name or op_name in name:
-                    # 处理星级图片路径
-                    star_value = op_data["星级"]
-                    star_image = f"<img src='/assets/tag/arknights/Star_Rating/{star_mapping.get(star_value, 'unknown')}.png' alt='{star_value}' />"
-                    
-                    # 处理标签 - 拆分成多个键值对
-                    tags = {}
-                    if "/" in op_data["标签"]:
-                        tag_list = op_data["标签"].split("/")
-                        for tag in tag_list:
-                            if tag.strip():  # 确保标签不为空
-                                tags[tag.strip()] = tag.strip()
+                    base_name = op_data.get("基础名称", op_name)
+                    if base_name in base_to_variants:
+                        # 添加所有变体
+                        for variant in base_to_variants[base_name]:
+                            if variant not in matched_ops:
+                                matched_ops.append(variant)
                     else:
-                        # 如果没有分隔符，就使用整个标签
-                        tags[op_data["标签"]] = op_data["标签"]
-                    
-                    # 处理阵营 - 拆分成多个键值对
-                    factions = {}
-                    if "," in op_data["阵营"] or "，" in op_data["阵营"]:
-                        # 替换中文逗号为英文逗号，然后分割
-                        faction_text = op_data["阵营"].replace("，", ",")
-                        faction_list = faction_text.split(",")
-                        for faction in faction_list:
-                            if faction.strip():  # 确保阵营不为空
-                                factions[faction.strip()] = faction.strip()
-                    else:
-                        # 如果没有分隔符，就使用整个阵营
-                        factions[op_data["阵营"]] = op_data["阵营"]
-                    
-                    # 获取职业名称作为字段名
-                    profession = op_data["职业"]
-                    
-                    result[char_id] = {
-                        "稀有度": {
-                            op_data["星级"]: star_image
-                        },
-                        profession: {
-                            profession: f"<img src='/assets/tag/arknights/Occupation/{profession}.png' alt='{profession}' />"
-                        },
-                        "标签": tags,
-                        "阵营": factions,
-                        "是否感染": {
-                            op_data["是否感染"]: op_data["是否感染"]
-                        }
-                    }
+                        matched_ops.append(op_name)
                     matched = True
-                    break
-
+            
+        # 处理匹配到的干员数据
+        if matched_ops:
+            # 合并所有匹配到的干员数据
+            for op_name in matched_ops:
+                op_data = arknights_ops[op_name]
+                
+                # 处理星级
+                star_value = op_data["星级"]
+                star_image = f"<img src='/assets/tag/arknights/Star_Rating/{star_mapping.get(star_value, 'unknown')}.png' alt='{star_value}' />"
+                character_data["稀有度"][star_value] = star_image
+                
+                # 处理职业 - 添加图片和文本
+                profession = op_data["职业"]
+                profession_image = f"<img src='/assets/tag/arknights/Occupation/{profession}.png' alt='{profession}' /> {profession}"
+                character_data["职业"][profession] = profession_image
+                
+                # 处理标签
+                if "/" in op_data["标签"]:
+                    tag_list = op_data["标签"].split("/")
+                    for tag in tag_list:
+                        if tag.strip() and tag.strip() not in character_data["标签"]:
+                            character_data["标签"][tag.strip()] = tag.strip()
+                else:
+                    # 如果没有分隔符，就使用整个标签
+                    tag = op_data["标签"]
+                    if tag not in character_data["标签"]:
+                        character_data["标签"][tag] = tag
+                
+                # 处理阵营
+                if "," in op_data["阵营"] or "，" in op_data["阵营"]:
+                    # 替换中文逗号为英文逗号，然后分割
+                    faction_text = op_data["阵营"].replace("，", ",")
+                    faction_list = faction_text.split(",")
+                    for faction in faction_list:
+                        if faction.strip() and faction.strip() not in character_data["阵营"]:
+                            character_data["阵营"][faction.strip()] = faction.strip()
+                else:
+                    # 如果没有分隔符，就使用整个阵营
+                    faction = op_data["阵营"]
+                    if faction not in character_data["阵营"]:
+                        character_data["阵营"][faction] = faction
+                
+                # 处理感染状态
+                infected_status = op_data["是否感染"]
+                character_data["是否感染"][infected_status] = infected_status
+            
+            result[char_id] = character_data
+        else:
             # 如果没有匹配到，添加一个空记录
-            if not matched:
-                result[char_id] = {
-                    "稀有度": {
-                        "未知星级": "<img src='/assets/tag/arknights/Star_Rating/unknown.png' alt='未知星级' />"
-                    },
-                    "未知职业": {
-                        "未知职业": "<img src='/assets/tag/arknights/Occupation/未知职业.png' alt='未知职业' />"
-                    },
-                    "标签": {
-                        "未知标签": "未知标签"
-                    },
-                    "阵营": {
-                        "未知阵营": "未知阵营"
-                    },
-                    "是否感染": {
-                        "未知": "未知"
-                    }
+            result[char_id] = {
+                "稀有度": {
+                    "未知星级": "<img src='/assets/tag/arknights/Star_Rating/unknown.png' alt='未知星级' />"
+                },
+                "职业": {
+                    "未知职业": "<img src='/assets/tag/arknights/Occupation/未知职业.png' alt='未知职业' /> 未知职业"
+                },
+                "标签": {
+                    "未知标签": "未知标签"
+                },
+                "阵营": {
+                    "未知阵营": "未知阵营"
+                },
+                "是否感染": {
+                    "未知": "未知"
                 }
+            }
     
     # 保存名称到ID的映射，方便调试
     with open('name_to_id_mapping.json', 'w', encoding='utf-8-sig') as f:
@@ -503,7 +511,31 @@ def match_characters_with_operators(bangumi_chars, arknights_ops):
 
 
 def save_to_json(data, filename="extra_tags.json"):
-    """将数据保存为JSON文件"""
+    """将数据保存为JSON文件，保留手动修改的数据"""
+    # 检查是否存在旧的数据文件
+    if os.path.exists(filename):
+        try:
+            # 加载旧的数据文件
+            with open(filename, 'r', encoding='utf-8-sig') as f:
+                old_data = json.load(f)
+                
+            # 合并数据：只替换包含"未知职业"的条目，保留其他手动修改
+            for char_id, char_info in old_data.items():
+                if char_id in data:
+                    # 检查是否为未映射的条目（含"未知职业"）
+                    if "未知职业" not in char_info["职业"]:
+                        # 如果不是未映射条目，保留手动修改
+                        data[char_id] = char_info
+                        print(f"保留手动修改的数据: ID {char_id}")
+                else:
+                    # 如果新数据中不存在此ID，也要保留
+                    data[char_id] = char_info
+                    
+            print(f"已合并手动修改的数据")
+        except Exception as e:
+            print(f"读取旧数据文件失败，无法保留手动修改: {e}")
+    
+    # 保存合并后的数据
     with open(filename, 'w', encoding='utf-8-sig') as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
     print(f"数据已保存到 {filename}")
@@ -512,12 +544,22 @@ def save_to_json(data, filename="extra_tags.json"):
 def main():
     # 使用命令行参数控制离线模式
     global OFFLINE_MODE
-    if len(sys.argv) > 1 and sys.argv[1] == "--offline":
-        OFFLINE_MODE = True
+    
+    # 解析命令行参数
+    parser = argparse.ArgumentParser(description='明日方舟角色数据爬虫')
+    parser.add_argument('--offline', action='store_true', help='启用离线模式，使用本地缓存数据')
+    parser.add_argument('--refresh-all', action='store_true', help='刷新所有数据，不保留手动修改')
+    args = parser.parse_args()
+    
+    OFFLINE_MODE = args.offline
+    
+    if OFFLINE_MODE:
         print("启用离线模式，将使用本地缓存数据")
     else:
-        OFFLINE_MODE = False
         print("禁用离线模式，将从网络获取最新数据")
+        
+    if args.refresh_all:
+        print("警告: 将刷新所有数据，不保留手动修改!")
 
     print("开始获取Bangumi角色数据...")
     bangumi_characters = get_bangumi_characters()
@@ -550,7 +592,15 @@ def main():
     
     print(f"成功匹配 {len(matched_data)} 个角色")
 
-    save_to_json(matched_data)
+    # 根据参数决定是否保留手动修改
+    if args.refresh_all:
+        # 不保留手动修改，直接保存
+        with open("extra_tags.json", 'w', encoding='utf-8-sig') as f:
+            json.dump(matched_data, f, ensure_ascii=False, indent=2)
+        print("所有数据已刷新，未保留手动修改")
+    else:
+        # 保留手动修改
+        save_to_json(matched_data)
 
 
 if __name__ == "__main__":
