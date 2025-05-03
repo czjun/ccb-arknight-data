@@ -19,11 +19,11 @@
 ```json
 {
   "角色ID": {
-    "星级": {
+    "稀有度": {
       "6星": "<img src='/assets/tag/arknights/Star_Rating/6star.png' alt='6星' />"
     },
-    "职业": {
-      "术师": "<img src='/assets/tag/arknights/Occupation/术师.png' alt='术师' />"
+    "特种": {
+      "特种": "<img src='/assets/tag/arknights/Occupation/特种.png' alt='特种' />"
     },
     "标签": {
       "远程位": "远程位",
