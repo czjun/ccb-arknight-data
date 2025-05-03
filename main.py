@@ -387,6 +387,42 @@ def match_characters_with_operators(bangumi_chars, arknights_ops):
         "未知星级": "unknown"
     }
     
+    # 首先读取现有的extra_tags.json文件，保留已有数据
+    existing_data = {}
+    if os.path.exists('extra_tags.json'):
+        try:
+            with open('extra_tags.json', 'r', encoding='utf-8-sig') as f:
+                existing_data = json.load(f)
+            print(f"成功加载已有数据，包含 {len(existing_data)} 个角色")
+        except Exception as e:
+            print(f"读取已有数据失败: {e}")
+    
+    # 创建Bangumi角色名称集合，用于检查变体是否在Bangumi上已经分开
+    bangumi_char_names = {char["name_cn"] for char in bangumi_chars if char.get("name_cn")}
+    
+    # 重置干员的基础名称，确保在Bangumi已有独立条目的变体不被合并
+    # 创建一个干员名称到Bangumi ID的映射
+    bangumi_name_to_id = {}
+    for char in bangumi_chars:
+        if char.get("name_cn") and char.get("id"):
+            bangumi_name_to_id[char["name_cn"]] = char["id"]
+    
+    # 修正arknights_ops中的基础名称
+    corrected_ops = {}
+    for op_name, op_data in arknights_ops.items():
+        # 复制原始数据
+        corrected_data = op_data.copy()
+        
+        # 如果干员名在Bangumi中有独立条目，将基础名称设为自身
+        if op_name in bangumi_char_names:
+            corrected_data["基础名称"] = op_name
+            print(f"修正干员基础名称: {op_name} (在Bangumi中有独立条目，将基础名称设为自身)")
+        
+        corrected_ops[op_name] = corrected_data
+    
+    # 使用修正后的数据
+    arknights_ops = corrected_ops
+    
     # 预处理：创建基础名称到所有变体的映射
     base_to_variants = {}
     name_to_base = {}  # 添加名称到基础名称的映射，用于更精确的变体检测
@@ -424,9 +460,6 @@ def match_characters_with_operators(bangumi_chars, arknights_ops):
         "苇草": ["焰影苇草"]
     }
     
-    # 创建Bangumi角色名称集合，用于检查变体是否在Bangumi上已经分开
-    bangumi_char_names = {char["name_cn"] for char in bangumi_chars if char.get("name_cn")}
-    
     # 根据Bangumi角色名称集合过滤变体映射
     filtered_variants = {}
     for base_name, variants in special_variants.items():
@@ -447,9 +480,13 @@ def match_characters_with_operators(bangumi_chars, arknights_ops):
             # 将特殊变体添加到基础名称的变体列表中
             for variant in variants:
                 if variant in arknights_ops and variant not in base_to_variants[base_name]:
-                    base_to_variants[base_name].append(variant)
-                    name_to_base[variant] = base_name
-                    print(f"添加特殊变体: {variant} -> {base_name}")
+                    # 再次检查变体是否在Bangumi中有独立条目
+                    if variant not in bangumi_char_names:
+                        base_to_variants[base_name].append(variant)
+                        name_to_base[variant] = base_name
+                        print(f"添加特殊变体: {variant} -> {base_name}")
+                    else:
+                        print(f"跳过已有独立条目的变体: {variant}")
     
     # 打印变体映射信息，用于调试
     for base_name, variants in base_to_variants.items():
@@ -542,6 +579,17 @@ def match_characters_with_operators(bangumi_chars, arknights_ops):
             # 打印匹配信息，用于调试
             if len(matched_ops) > 1:
                 print(f"角色 [{name}] 匹配到多个干员: {matched_ops}")
+            
+            # 获取已有数据（如果存在）
+            existing_char_data = {}
+            if char_id in existing_data:
+                existing_char_data = existing_data[char_id]
+                print(f"角色 [{name}] 已有数据，将合并")
+                
+                # 复制已有数据到新数据结构中
+                for category in ["稀有度", "职业", "标签", "阵营", "是否感染"]:
+                    if category in existing_char_data:
+                        character_data[category] = existing_char_data[category].copy()
                 
             # 合并所有匹配到的干员数据
             for op_name in matched_ops:
@@ -587,26 +635,51 @@ def match_characters_with_operators(bangumi_chars, arknights_ops):
                 infected_status = op_data["是否感染"]
                 character_data["是否感染"][infected_status] = infected_status
             
+            # 清理"未知"默认值
+            for category in ["稀有度", "职业", "标签", "阵营", "是否感染"]:
+                # 如果存在非"未知"的条目，删除所有"未知"条目
+                if category in character_data:
+                    # 检查是否有非未知的条目
+                    has_known_entries = False
+                    unknown_keys = []
+                    
+                    for key in character_data[category]:
+                        if "未知" not in key:
+                            has_known_entries = True
+                        else:
+                            unknown_keys.append(key)
+                    
+                    # 如果有非未知条目，删除所有未知条目
+                    if has_known_entries and unknown_keys:
+                        for key in unknown_keys:
+                            character_data[category].pop(key, None)
+            
             result[char_id] = character_data
         else:
-            # 如果没有匹配到，添加一个空记录
-            result[char_id] = {
-                "稀有度": {
-                    "未知星级": "<img src='/assets/tag/arknights/Star_Rating/unknown.png' alt='未知星级' />"
-                },
-                "职业": {
-                    "未知职业": "<img src='/assets/tag/arknights/Occupation/未知职业.png' alt='未知职业' /> 未知职业"
-                },
-                "标签": {
-                    "未知标签": "未知标签"
-                },
-                "阵营": {
-                    "未知阵营": "未知阵营"
-                },
-                "是否感染": {
-                    "未知": "未知"
+            # 如果没有匹配到，使用已有数据
+            if char_id in existing_data:
+                print(f"角色 [{name}] 未找到匹配，使用已有数据")
+                result[char_id] = existing_data[char_id]
+            else:
+                # 如果真的没有任何数据，才添加空记录
+                print(f"角色 [{name}] 未找到匹配，添加默认记录")
+                result[char_id] = {
+                    "稀有度": {
+                        "未知星级": "<img src='/assets/tag/arknights/Star_Rating/unknown.png' alt='未知星级' />"
+                    },
+                    "职业": {
+                        "未知职业": "<img src='/assets/tag/arknights/Occupation/未知职业.png' alt='未知职业' /> 未知职业"
+                    },
+                    "标签": {
+                        "未知标签": "未知标签"
+                    },
+                    "阵营": {
+                        "未知阵营": "未知阵营"
+                    },
+                    "是否感染": {
+                        "未知": "未知"
+                    }
                 }
-            }
     
     # 保存名称到ID的映射，方便调试
     with open('name_to_id_mapping.json', 'w', encoding='utf-8-sig') as f:
