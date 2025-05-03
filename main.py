@@ -405,12 +405,15 @@ def match_characters_with_operators(bangumi_chars, arknights_ops):
                 # 如果没有分隔符，就使用整个阵营
                 factions[op_data["阵营"]] = op_data["阵营"]
             
+            # 获取职业名称作为字段名
+            profession = op_data["职业"]
+            
             result[char_id] = {
-                "星级": {
+                "稀有度": {
                     op_data["星级"]: star_image
                 },
-                "职业": {
-                    op_data["职业"]: f"<img src='/assets/tag/arknights/Occupation/{op_data['职业']}.png' alt='{op_data['职业']}' />"
+                profession: {
+                    profession: f"<img src='/assets/tag/arknights/Occupation/{profession}.png' alt='{profession}' />"
                 },
                 "标签": tags,
                 "阵营": factions,
@@ -452,12 +455,15 @@ def match_characters_with_operators(bangumi_chars, arknights_ops):
                         # 如果没有分隔符，就使用整个阵营
                         factions[op_data["阵营"]] = op_data["阵营"]
                     
+                    # 获取职业名称作为字段名
+                    profession = op_data["职业"]
+                    
                     result[char_id] = {
-                        "星级": {
+                        "稀有度": {
                             op_data["星级"]: star_image
                         },
-                        "职业": {
-                            op_data["职业"]: f"<img src='/assets/tag/arknights/Occupation/{op_data['职业']}.png' alt='{op_data['职业']}' />"
+                        profession: {
+                            profession: f"<img src='/assets/tag/arknights/Occupation/{profession}.png' alt='{profession}' />"
                         },
                         "标签": tags,
                         "阵营": factions,
@@ -471,10 +477,10 @@ def match_characters_with_operators(bangumi_chars, arknights_ops):
             # 如果没有匹配到，添加一个空记录
             if not matched:
                 result[char_id] = {
-                    "星级": {
+                    "稀有度": {
                         "未知星级": "<img src='/assets/tag/arknights/Star_Rating/unknown.png' alt='未知星级' />"
                     },
-                    "职业": {
+                    "未知职业": {
                         "未知职业": "<img src='/assets/tag/arknights/Occupation/未知职业.png' alt='未知职业' />"
                     },
                     "标签": {
