@@ -1,0 +1,2324 @@
+[
+  {
+    "id": "65905",
+    "name": "阿米娅",
+    "name_cn": "阿米娅",
+    "role_type": "配角"
+  },
+  {
+    "id": "71016",
+    "name": "博士",
+    "name_cn": "博士",
+    "role_type": "配角"
+  },
+  {
+    "id": "65914",
+    "name": "凯尔希",
+    "name_cn": "凯尔希",
+    "role_type": "配角"
+  },
+  {
+    "id": "102043",
+    "name": "可露希尔",
+    "name_cn": "可露希尔",
+    "role_type": "配角"
+  },
+  {
+    "id": "65915",
+    "name": "Mon3tr",
+    "name_cn": "Mon3tr",
+    "role_type": "配角"
+  },
+  {
+    "id": "65916",
+    "name": "德克萨斯",
+    "name_cn": "德克萨斯",
+    "role_type": "配角"
+  },
+  {
+    "id": "65917",
+    "name": "能天使",
+    "name_cn": "能天使",
+    "role_type": "配角"
+  },
+  {
+    "id": "65918",
+    "name": "天火",
+    "name_cn": "天火",
+    "role_type": "配角"
+  },
+  {
+    "id": "70186",
+    "name": "银灰",
+    "name_cn": "银灰",
+    "role_type": "配角"
+  },
+  {
+    "id": "70187",
+    "name": "讯使",
+    "name_cn": "讯使",
+    "role_type": "配角"
+  },
+  {
+    "id": "70189",
+    "name": "史都华德",
+    "name_cn": "史都华德",
+    "role_type": "配角"
+  },
+  {
+    "id": "70190",
+    "name": "角峰",
+    "name_cn": "角峰",
+    "role_type": "配角"
+  },
+  {
+    "id": "70192",
+    "name": "黑角",
+    "name_cn": "黑角",
+    "role_type": "配角"
+  },
+  {
+    "id": "70219",
+    "name": "弑君者",
+    "name_cn": "弑君者",
+    "role_type": "配角"
+  },
+  {
+    "id": "70220",
+    "name": "初雪",
+    "name_cn": "初雪",
+    "role_type": "配角"
+  },
+  {
+    "id": "70221",
+    "name": "克洛丝",
+    "name_cn": "克洛丝",
+    "role_type": "配角"
+  },
+  {
+    "id": "70224",
+    "name": "调香师",
+    "name_cn": "调香师",
+    "role_type": "配角"
+  },
+  {
+    "id": "70225",
+    "name": "香草",
+    "name_cn": "香草",
+    "role_type": "配角"
+  },
+  {
+    "id": "70229",
+    "name": "芙蓉",
+    "name_cn": "芙蓉",
+    "role_type": "配角"
+  },
+  {
+    "id": "70230",
+    "name": "杰西卡",
+    "name_cn": "杰西卡",
+    "role_type": "配角"
+  },
+  {
+    "id": "70231",
+    "name": "白雪",
+    "name_cn": "白雪",
+    "role_type": "配角"
+  },
+  {
+    "id": "70232",
+    "name": "远山",
+    "name_cn": "远山",
+    "role_type": "配角"
+  },
+  {
+    "id": "70233",
+    "name": "炎熔",
+    "name_cn": "炎熔",
+    "role_type": "配角"
+  },
+  {
+    "id": "70236",
+    "name": "砾",
+    "name_cn": "砾",
+    "role_type": "配角"
+  },
+  {
+    "id": "70238",
+    "name": "暴行",
+    "name_cn": "暴行",
+    "role_type": "配角"
+  },
+  {
+    "id": "70240",
+    "name": "慕斯",
+    "name_cn": "慕斯",
+    "role_type": "配角"
+  },
+  {
+    "id": "70241",
+    "name": "梓兰",
+    "name_cn": "梓兰",
+    "role_type": "配角"
+  },
+  {
+    "id": "70243",
+    "name": "临光",
+    "name_cn": "临光",
+    "role_type": "配角"
+  },
+  {
+    "id": "70263",
+    "name": "流星",
+    "name_cn": "流星",
+    "role_type": "配角"
+  },
+  {
+    "id": "70267",
+    "name": "杜林",
+    "name_cn": "杜林",
+    "role_type": "配角"
+  },
+  {
+    "id": "70271",
+    "name": "蛇屠箱",
+    "name_cn": "蛇屠箱",
+    "role_type": "配角"
+  },
+  {
+    "id": "70274",
+    "name": "末药",
+    "name_cn": "末药",
+    "role_type": "配角"
+  },
+  {
+    "id": "70277",
+    "name": "月见夜",
+    "name_cn": "月见夜",
+    "role_type": "配角"
+  },
+  {
+    "id": "70278",
+    "name": "清道夫",
+    "name_cn": "清道夫",
+    "role_type": "配角"
+  },
+  {
+    "id": "70280",
+    "name": "猎蜂",
+    "name_cn": "猎蜂",
+    "role_type": "配角"
+  },
+  {
+    "id": "70281",
+    "name": "赫默",
+    "name_cn": "赫默",
+    "role_type": "配角"
+  },
+  {
+    "id": "70293",
+    "name": "格拉尼",
+    "name_cn": "格拉尼",
+    "role_type": "配角"
+  },
+  {
+    "id": "70338",
+    "name": "可颂",
+    "name_cn": "可颂",
+    "role_type": "配角"
+  },
+  {
+    "id": "70339",
+    "name": "梅尔",
+    "name_cn": "梅尔",
+    "role_type": "配角"
+  },
+  {
+    "id": "70340",
+    "name": "芙兰卡",
+    "name_cn": "芙兰卡",
+    "role_type": "配角"
+  },
+  {
+    "id": "70341",
+    "name": "狮蝎",
+    "name_cn": "狮蝎",
+    "role_type": "配角"
+  },
+  {
+    "id": "70344",
+    "name": "幽灵鲨",
+    "name_cn": "幽灵鲨",
+    "role_type": "配角"
+  },
+  {
+    "id": "70389",
+    "name": "空",
+    "name_cn": "空",
+    "role_type": "配角"
+  },
+  {
+    "id": "70390",
+    "name": "真理",
+    "name_cn": "真理",
+    "role_type": "配角"
+  },
+  {
+    "id": "70392",
+    "name": "陨星",
+    "name_cn": "陨星",
+    "role_type": "配角"
+  },
+  {
+    "id": "70394",
+    "name": "夜莺",
+    "name_cn": "夜莺",
+    "role_type": "配角"
+  },
+  {
+    "id": "70395",
+    "name": "因陀罗",
+    "name_cn": "因陀罗",
+    "role_type": "配角"
+  },
+  {
+    "id": "70398",
+    "name": "蓝毒",
+    "name_cn": "蓝毒",
+    "role_type": "配角"
+  },
+  {
+    "id": "70400",
+    "name": "火神",
+    "name_cn": "火神",
+    "role_type": "配角"
+  },
+  {
+    "id": "70406",
+    "name": "红",
+    "name_cn": "红",
+    "role_type": "配角"
+  },
+  {
+    "id": "70408",
+    "name": "艾雅法拉",
+    "name_cn": "艾雅法拉",
+    "role_type": "配角"
+  },
+  {
+    "id": "70409",
+    "name": "古米",
+    "name_cn": "古米",
+    "role_type": "配角"
+  },
+  {
+    "id": "70655",
+    "name": "斯卡蒂",
+    "name_cn": "斯卡蒂",
+    "role_type": "配角"
+  },
+  {
+    "id": "70656",
+    "name": "艾丝黛尔",
+    "name_cn": "艾丝黛尔",
+    "role_type": "配角"
+  },
+  {
+    "id": "70657",
+    "name": "Castle-3",
+    "name_cn": "Castle-3",
+    "role_type": "配角"
+  },
+  {
+    "id": "70840",
+    "name": "格雷伊",
+    "name_cn": "格雷伊",
+    "role_type": "配角"
+  },
+  {
+    "id": "70842",
+    "name": "泡普卡",
+    "name_cn": "泡普卡",
+    "role_type": "配角"
+  },
+  {
+    "id": "70843",
+    "name": "斑点",
+    "name_cn": "斑点",
+    "role_type": "配角"
+  },
+  {
+    "id": "70844",
+    "name": "W",
+    "name_cn": "W",
+    "role_type": "配角"
+  },
+  {
+    "id": "70847",
+    "name": "大帝",
+    "name_cn": "大帝",
+    "role_type": "配角"
+  },
+  {
+    "id": "71012",
+    "name": "雷蛇",
+    "name_cn": "雷蛇",
+    "role_type": "配角"
+  },
+  {
+    "id": "71480",
+    "name": "黑",
+    "name_cn": "黑",
+    "role_type": "配角"
+  },
+  {
+    "id": "71482",
+    "name": "锡兰",
+    "name_cn": "锡兰",
+    "role_type": "配角"
+  },
+  {
+    "id": "71483",
+    "name": "苏苏洛",
+    "name_cn": "苏苏洛",
+    "role_type": "配角"
+  },
+  {
+    "id": "71742",
+    "name": "赫拉格",
+    "name_cn": "赫拉格",
+    "role_type": "配角"
+  },
+  {
+    "id": "71743",
+    "name": "星极",
+    "name_cn": "星极",
+    "role_type": "配角"
+  },
+  {
+    "id": "71744",
+    "name": "桃金娘",
+    "name_cn": "桃金娘",
+    "role_type": "配角"
+  },
+  {
+    "id": "72298",
+    "name": "红云",
+    "name_cn": "红云",
+    "role_type": "配角"
+  },
+  {
+    "id": "72299",
+    "name": "炎客",
+    "name_cn": "炎客",
+    "role_type": "配角"
+  },
+  {
+    "id": "72303",
+    "name": "送葬人",
+    "name_cn": "送葬人",
+    "role_type": "配角"
+  },
+  {
+    "id": "72316",
+    "name": "坚雷",
+    "name_cn": "坚雷",
+    "role_type": "配角"
+  },
+  {
+    "id": "73031",
+    "name": "梅",
+    "name_cn": "梅",
+    "role_type": "配角"
+  },
+  {
+    "id": "73032",
+    "name": "拜松",
+    "name_cn": "拜松",
+    "role_type": "配角"
+  },
+  {
+    "id": "73034",
+    "name": "伊桑",
+    "name_cn": "伊桑",
+    "role_type": "配角"
+  },
+  {
+    "id": "73035",
+    "name": "微风",
+    "name_cn": "微风",
+    "role_type": "配角"
+  },
+  {
+    "id": "73233",
+    "name": "莫斯提马",
+    "name_cn": "莫斯提马",
+    "role_type": "配角"
+  },
+  {
+    "id": "73234",
+    "name": "槐琥",
+    "name_cn": "槐琥",
+    "role_type": "配角"
+  },
+  {
+    "id": "74872",
+    "name": "阿",
+    "name_cn": "阿",
+    "role_type": "配角"
+  },
+  {
+    "id": "74873",
+    "name": "吽",
+    "name_cn": "吽",
+    "role_type": "配角"
+  },
+  {
+    "id": "74876",
+    "name": "灰喉",
+    "name_cn": "灰喉",
+    "role_type": "配角"
+  },
+  {
+    "id": "74877",
+    "name": "安比尔",
+    "name_cn": "安比尔",
+    "role_type": "配角"
+  },
+  {
+    "id": "76329",
+    "name": "柏喙",
+    "name_cn": "柏喙",
+    "role_type": "配角"
+  },
+  {
+    "id": "76330",
+    "name": "苇草",
+    "name_cn": "苇草",
+    "role_type": "配角"
+  },
+  {
+    "id": "76903",
+    "name": "傀影",
+    "name_cn": "傀影",
+    "role_type": "配角"
+  },
+  {
+    "id": "76904",
+    "name": "巫恋",
+    "name_cn": "巫恋",
+    "role_type": "配角"
+  },
+  {
+    "id": "76905",
+    "name": "铸铁",
+    "name_cn": "铸铁",
+    "role_type": "配角"
+  },
+  {
+    "id": "76906",
+    "name": "刻刀",
+    "name_cn": "刻刀",
+    "role_type": "配角"
+  },
+  {
+    "id": "76908",
+    "name": "慑砂",
+    "name_cn": "慑砂",
+    "role_type": "配角"
+  },
+  {
+    "id": "76909",
+    "name": "宴",
+    "name_cn": "宴",
+    "role_type": "配角"
+  },
+  {
+    "id": "76910",
+    "name": "清流",
+    "name_cn": "清流",
+    "role_type": "配角"
+  },
+  {
+    "id": "76911",
+    "name": "刻俄柏",
+    "name_cn": "刻俄柏",
+    "role_type": "配角"
+  },
+  {
+    "id": "76912",
+    "name": "惊蛰",
+    "name_cn": "惊蛰",
+    "role_type": "配角"
+  },
+  {
+    "id": "76942",
+    "name": "温蒂",
+    "name_cn": "温蒂",
+    "role_type": "配角"
+  },
+  {
+    "id": "76944",
+    "name": "极境",
+    "name_cn": "极境",
+    "role_type": "配角"
+  },
+  {
+    "id": "76947",
+    "name": "THRM-EX",
+    "name_cn": "THRM-EX",
+    "role_type": "配角"
+  },
+  {
+    "id": "77050",
+    "name": "夜魔",
+    "name_cn": "夜魔",
+    "role_type": "配角"
+  },
+  {
+    "id": "77338",
+    "name": "石棉",
+    "name_cn": "石棉",
+    "role_type": "配角"
+  },
+  {
+    "id": "77433",
+    "name": "月禾",
+    "name_cn": "月禾",
+    "role_type": "配角"
+  },
+  {
+    "id": "77499",
+    "name": "波登可",
+    "name_cn": "波登可",
+    "role_type": "配角"
+  },
+  {
+    "id": "77544",
+    "name": "苦艾",
+    "name_cn": "苦艾",
+    "role_type": "配角"
+  },
+  {
+    "id": "77593",
+    "name": "莱恩哈特",
+    "name_cn": "莱恩哈特",
+    "role_type": "配角"
+  },
+  {
+    "id": "77606",
+    "name": "早露",
+    "name_cn": "早露",
+    "role_type": "配角"
+  },
+  {
+    "id": "77961",
+    "name": "卡达",
+    "name_cn": "卡达",
+    "role_type": "配角"
+  },
+  {
+    "id": "77976",
+    "name": "亚叶",
+    "name_cn": "亚叶",
+    "role_type": "配角"
+  },
+  {
+    "id": "77995",
+    "name": "断崖",
+    "name_cn": "断崖",
+    "role_type": "配角"
+  },
+  {
+    "id": "77999",
+    "name": "蜜蜡",
+    "name_cn": "蜜蜡",
+    "role_type": "配角"
+  },
+  {
+    "id": "78000",
+    "name": "稀音",
+    "name_cn": "稀音",
+    "role_type": "配角"
+  },
+  {
+    "id": "78001",
+    "name": "铃兰",
+    "name_cn": "铃兰",
+    "role_type": "配角"
+  },
+  {
+    "id": "81199",
+    "name": "布洛卡",
+    "name_cn": "布洛卡",
+    "role_type": "配角"
+  },
+  {
+    "id": "81200",
+    "name": "特米米",
+    "name_cn": "特米米",
+    "role_type": "配角"
+  },
+  {
+    "id": "81201",
+    "name": "森蚺",
+    "name_cn": "森蚺",
+    "role_type": "配角"
+  },
+  {
+    "id": "86005",
+    "name": "史尔特尔",
+    "name_cn": "史尔特尔",
+    "role_type": "配角"
+  },
+  {
+    "id": "86006",
+    "name": "安哲拉",
+    "name_cn": "安哲拉",
+    "role_type": "配角"
+  },
+  {
+    "id": "86007",
+    "name": "酸糖",
+    "name_cn": "酸糖",
+    "role_type": "配角"
+  },
+  {
+    "id": "86008",
+    "name": "芳汀",
+    "name_cn": "芳汀",
+    "role_type": "配角"
+  },
+  {
+    "id": "86065",
+    "name": "棘刺",
+    "name_cn": "棘刺",
+    "role_type": "配角"
+  },
+  {
+    "id": "86753",
+    "name": "鞭刃",
+    "name_cn": "鞭刃",
+    "role_type": "配角"
+  },
+  {
+    "id": "86756",
+    "name": "絮雨",
+    "name_cn": "絮雨",
+    "role_type": "配角"
+  },
+  {
+    "id": "86893",
+    "name": "迷迭香",
+    "name_cn": "迷迭香",
+    "role_type": "配角"
+  },
+  {
+    "id": "86894",
+    "name": "泥岩",
+    "name_cn": "泥岩",
+    "role_type": "配角"
+  },
+  {
+    "id": "89227",
+    "name": "松果",
+    "name_cn": "松果",
+    "role_type": "配角"
+  },
+  {
+    "id": "89228",
+    "name": "奥斯塔",
+    "name_cn": "奥斯塔",
+    "role_type": "配角"
+  },
+  {
+    "id": "89229",
+    "name": "瑕光",
+    "name_cn": "瑕光",
+    "role_type": "配角"
+  },
+  {
+    "id": "89230",
+    "name": "薄绿",
+    "name_cn": "薄绿",
+    "role_type": "配角"
+  },
+  {
+    "id": "89231",
+    "name": "孑",
+    "name_cn": "孑",
+    "role_type": "配角"
+  },
+  {
+    "id": "89232",
+    "name": "燧石",
+    "name_cn": "燧石",
+    "role_type": "配角"
+  },
+  {
+    "id": "89233",
+    "name": "山",
+    "name_cn": "山",
+    "role_type": "配角"
+  },
+  {
+    "id": "89240",
+    "name": "林",
+    "name_cn": "林",
+    "role_type": "配角"
+  },
+  {
+    "id": "90461",
+    "name": "空弦",
+    "name_cn": "空弦",
+    "role_type": "配角"
+  },
+  {
+    "id": "90481",
+    "name": "豆苗",
+    "name_cn": "豆苗",
+    "role_type": "配角"
+  },
+  {
+    "id": "91344",
+    "name": "乌有",
+    "name_cn": "乌有",
+    "role_type": "配角"
+  },
+  {
+    "id": "91345",
+    "name": "爱丽丝",
+    "name_cn": "爱丽丝",
+    "role_type": "配角"
+  },
+  {
+    "id": "96838",
+    "name": "异客",
+    "name_cn": "异客",
+    "role_type": "配角"
+  },
+  {
+    "id": "102315",
+    "name": "暴雨",
+    "name_cn": "暴雨",
+    "role_type": "配角"
+  },
+  {
+    "id": "102316",
+    "name": "歌蕾蒂娅",
+    "name_cn": "歌蕾蒂娅",
+    "role_type": "配角"
+  },
+  {
+    "id": "102393",
+    "name": "深靛",
+    "name_cn": "深靛",
+    "role_type": "配角"
+  },
+  {
+    "id": "102394",
+    "name": "羽毛笔",
+    "name_cn": "羽毛笔",
+    "role_type": "配角"
+  },
+  {
+    "id": "102395",
+    "name": "龙舌兰",
+    "name_cn": "龙舌兰",
+    "role_type": "配角"
+  },
+  {
+    "id": "102396",
+    "name": "正义骑士号",
+    "name_cn": "正义骑士号",
+    "role_type": "配角"
+  },
+  {
+    "id": "102397",
+    "name": "蜜莓",
+    "name_cn": "蜜莓",
+    "role_type": "配角"
+  },
+  {
+    "id": "102823",
+    "name": "灰毫",
+    "name_cn": "灰毫",
+    "role_type": "配角"
+  },
+  {
+    "id": "110193",
+    "name": "艾丽妮",
+    "name_cn": "艾丽妮",
+    "role_type": "配角"
+  },
+  {
+    "id": "110194",
+    "name": "流明",
+    "name_cn": "流明",
+    "role_type": "配角"
+  },
+  {
+    "id": "110195",
+    "name": "掠风",
+    "name_cn": "掠风",
+    "role_type": "配角"
+  },
+  {
+    "id": "110779",
+    "name": "埃拉托",
+    "name_cn": "埃拉托",
+    "role_type": "配角"
+  },
+  {
+    "id": "113058",
+    "name": "海蒂",
+    "name_cn": "海蒂",
+    "role_type": "配角"
+  },
+  {
+    "id": "119528",
+    "name": "斥罪",
+    "name_cn": "斥罪",
+    "role_type": "配角"
+  },
+  {
+    "id": "119529",
+    "name": "子月",
+    "name_cn": "子月",
+    "role_type": "配角"
+  },
+  {
+    "id": "122445",
+    "name": "老鲤",
+    "name_cn": "老鲤",
+    "role_type": "配角"
+  },
+  {
+    "id": "123475",
+    "name": "菲亚梅塔",
+    "name_cn": "菲亚梅塔",
+    "role_type": "配角"
+  },
+  {
+    "id": "123478",
+    "name": "星源",
+    "name_cn": "星源",
+    "role_type": "配角"
+  },
+  {
+    "id": "123479",
+    "name": "晓歌",
+    "name_cn": "晓歌",
+    "role_type": "配角"
+  },
+  {
+    "id": "123480",
+    "name": "嵯峨",
+    "name_cn": "嵯峨",
+    "role_type": "配角"
+  },
+  {
+    "id": "123481",
+    "name": "达格达",
+    "name_cn": "达格达",
+    "role_type": "配角"
+  },
+  {
+    "id": "123482",
+    "name": "铅踝",
+    "name_cn": "铅踝",
+    "role_type": "配角"
+  },
+  {
+    "id": "123484",
+    "name": "夏栎",
+    "name_cn": "夏栎",
+    "role_type": "配角"
+  },
+  {
+    "id": "124308",
+    "name": "火哨",
+    "name_cn": "火哨",
+    "role_type": "配角"
+  },
+  {
+    "id": "124309",
+    "name": "重岳",
+    "name_cn": "重岳",
+    "role_type": "配角"
+  },
+  {
+    "id": "124310",
+    "name": "但书",
+    "name_cn": "但书",
+    "role_type": "配角"
+  },
+  {
+    "id": "125004",
+    "name": "截云",
+    "name_cn": "截云",
+    "role_type": "配角"
+  },
+  {
+    "id": "125006",
+    "name": "缄默德克萨斯",
+    "name_cn": "缄默德克萨斯",
+    "role_type": "配角"
+  },
+  {
+    "id": "125008",
+    "name": "承曦格雷伊",
+    "name_cn": "承曦格雷伊",
+    "role_type": "配角"
+  },
+  {
+    "id": "125009",
+    "name": "濯尘芙蓉",
+    "name_cn": "濯尘芙蓉",
+    "role_type": "配角"
+  },
+  {
+    "id": "125010",
+    "name": "寒芒克洛丝",
+    "name_cn": "寒芒克洛丝",
+    "role_type": "配角"
+  },
+  {
+    "id": "125015",
+    "name": "和弦",
+    "name_cn": "和弦",
+    "role_type": "配角"
+  },
+  {
+    "id": "125017",
+    "name": "石英",
+    "name_cn": "石英",
+    "role_type": "配角"
+  },
+  {
+    "id": "125018",
+    "name": "白铁",
+    "name_cn": "白铁",
+    "role_type": "配角"
+  },
+  {
+    "id": "125019",
+    "name": "明椒",
+    "name_cn": "明椒",
+    "role_type": "配角"
+  },
+  {
+    "id": "125020",
+    "name": "海沫",
+    "name_cn": "海沫",
+    "role_type": "配角"
+  },
+  {
+    "id": "125021",
+    "name": "玛恩纳",
+    "name_cn": "玛恩纳",
+    "role_type": "配角"
+  },
+  {
+    "id": "125022",
+    "name": "鸿雪",
+    "name_cn": "鸿雪",
+    "role_type": "配角"
+  },
+  {
+    "id": "125023",
+    "name": "至简",
+    "name_cn": "至简",
+    "role_type": "配角"
+  },
+  {
+    "id": "125024",
+    "name": "多萝西",
+    "name_cn": "多萝西",
+    "role_type": "配角"
+  },
+  {
+    "id": "125026",
+    "name": "号角",
+    "name_cn": "号角",
+    "role_type": "配角"
+  },
+  {
+    "id": "125027",
+    "name": "洛洛",
+    "name_cn": "洛洛",
+    "role_type": "配角"
+  },
+  {
+    "id": "125028",
+    "name": "褐果",
+    "name_cn": "褐果",
+    "role_type": "配角"
+  },
+  {
+    "id": "125029",
+    "name": "风丸",
+    "name_cn": "风丸",
+    "role_type": "配角"
+  },
+  {
+    "id": "125030",
+    "name": "澄闪",
+    "name_cn": "澄闪",
+    "role_type": "配角"
+  },
+  {
+    "id": "125034",
+    "name": "暮落",
+    "name_cn": "暮落",
+    "role_type": "配角"
+  },
+  {
+    "id": "125037",
+    "name": "焰尾",
+    "name_cn": "焰尾",
+    "role_type": "配角"
+  },
+  {
+    "id": "125038",
+    "name": "野鬃",
+    "name_cn": "野鬃",
+    "role_type": "配角"
+  },
+  {
+    "id": "125039",
+    "name": "布丁",
+    "name_cn": "布丁",
+    "role_type": "配角"
+  },
+  {
+    "id": "125040",
+    "name": "远牙",
+    "name_cn": "远牙",
+    "role_type": "配角"
+  },
+  {
+    "id": "125041",
+    "name": "琴柳",
+    "name_cn": "琴柳",
+    "role_type": "配角"
+  },
+  {
+    "id": "125042",
+    "name": "水月",
+    "name_cn": "水月",
+    "role_type": "配角"
+  },
+  {
+    "id": "125043",
+    "name": "帕拉斯",
+    "name_cn": "帕拉斯",
+    "role_type": "配角"
+  },
+  {
+    "id": "125044",
+    "name": "卡涅利安",
+    "name_cn": "卡涅利安",
+    "role_type": "配角"
+  },
+  {
+    "id": "125045",
+    "name": "绮良",
+    "name_cn": "绮良",
+    "role_type": "配角"
+  },
+  {
+    "id": "125046",
+    "name": "贝娜",
+    "name_cn": "贝娜",
+    "role_type": "配角"
+  },
+  {
+    "id": "125047",
+    "name": "赤冬",
+    "name_cn": "赤冬",
+    "role_type": "配角"
+  },
+  {
+    "id": "125048",
+    "name": "熔泉",
+    "name_cn": "熔泉",
+    "role_type": "配角"
+  },
+  {
+    "id": "125053",
+    "name": "图耶",
+    "name_cn": "图耶",
+    "role_type": "配角"
+  },
+  {
+    "id": "125054",
+    "name": "卡夫卡",
+    "name_cn": "卡夫卡",
+    "role_type": "配角"
+  },
+  {
+    "id": "125055",
+    "name": "罗宾",
+    "name_cn": "罗宾",
+    "role_type": "配角"
+  },
+  {
+    "id": "125057",
+    "name": "泡泡",
+    "name_cn": "泡泡",
+    "role_type": "配角"
+  },
+  {
+    "id": "125058",
+    "name": "四月",
+    "name_cn": "四月",
+    "role_type": "配角"
+  },
+  {
+    "id": "125059",
+    "name": "断罪者",
+    "name_cn": "断罪者",
+    "role_type": "配角"
+  },
+  {
+    "id": "125392",
+    "name": "仇白",
+    "name_cn": "仇白",
+    "role_type": "配角"
+  },
+  {
+    "id": "125393",
+    "name": "铎铃",
+    "name_cn": "铎铃",
+    "role_type": "配角"
+  },
+  {
+    "id": "127398",
+    "name": "U-Official",
+    "name_cn": "U-Official",
+    "role_type": "配角"
+  },
+  {
+    "id": "127697",
+    "name": "伊内丝",
+    "name_cn": "伊内丝",
+    "role_type": "配角"
+  },
+  {
+    "id": "127698",
+    "name": "洋灰",
+    "name_cn": "洋灰",
+    "role_type": "配角"
+  },
+  {
+    "id": "127700",
+    "name": "休谟斯",
+    "name_cn": "休谟斯",
+    "role_type": "配角"
+  },
+  {
+    "id": "127701",
+    "name": "摩根",
+    "name_cn": "摩根",
+    "role_type": "配角"
+  },
+  {
+    "id": "129084",
+    "name": "缪尔赛思",
+    "name_cn": "缪尔赛思",
+    "role_type": "配角"
+  },
+  {
+    "id": "129279",
+    "name": "玫拉",
+    "name_cn": "玫拉",
+    "role_type": "配角"
+  },
+  {
+    "id": "129281",
+    "name": "霍尔海雅",
+    "name_cn": "霍尔海雅",
+    "role_type": "配角"
+  },
+  {
+    "id": "131359",
+    "name": "隐现",
+    "name_cn": "隐现",
+    "role_type": "配角"
+  },
+  {
+    "id": "131360",
+    "name": "空构",
+    "name_cn": "空构",
+    "role_type": "配角"
+  },
+  {
+    "id": "133119",
+    "name": "寒檀",
+    "name_cn": "寒檀",
+    "role_type": "配角"
+  },
+  {
+    "id": "133120",
+    "name": "提丰",
+    "name_cn": "提丰",
+    "role_type": "配角"
+  },
+  {
+    "id": "133943",
+    "name": "凛视",
+    "name_cn": "凛视",
+    "role_type": "配角"
+  },
+  {
+    "id": "134276",
+    "name": "纯烬艾雅法拉",
+    "name_cn": "纯烬艾雅法拉",
+    "role_type": "配角"
+  },
+  {
+    "id": "134278",
+    "name": "青枳",
+    "name_cn": "青枳",
+    "role_type": "配角"
+  },
+  {
+    "id": "134279",
+    "name": "苍苔",
+    "name_cn": "苍苔",
+    "role_type": "配角"
+  },
+  {
+    "id": "137509",
+    "name": "冰酿",
+    "name_cn": "冰酿",
+    "role_type": "配角"
+  },
+  {
+    "id": "137510",
+    "name": "杏仁",
+    "name_cn": "杏仁",
+    "role_type": "配角"
+  },
+  {
+    "id": "139391",
+    "name": "赫德雷",
+    "name_cn": "赫德雷",
+    "role_type": "配角"
+  },
+  {
+    "id": "139392",
+    "name": "戴菲恩",
+    "name_cn": "戴菲恩",
+    "role_type": "配角"
+  },
+  {
+    "id": "139393",
+    "name": "刺玫",
+    "name_cn": "刺玫",
+    "role_type": "配角"
+  },
+  {
+    "id": "139394",
+    "name": "维荻",
+    "name_cn": "维荻",
+    "role_type": "配角"
+  },
+  {
+    "id": "141870",
+    "name": "跃跃",
+    "name_cn": "跃跃",
+    "role_type": "配角"
+  },
+  {
+    "id": "141871",
+    "name": "折光",
+    "name_cn": "折光",
+    "role_type": "配角"
+  },
+  {
+    "id": "141872",
+    "name": "深律",
+    "name_cn": "深律",
+    "role_type": "配角"
+  },
+  {
+    "id": "141873",
+    "name": "止颂",
+    "name_cn": "止颂",
+    "role_type": "配角"
+  },
+  {
+    "id": "141874",
+    "name": "薇薇安娜",
+    "name_cn": "薇薇安娜",
+    "role_type": "配角"
+  },
+  {
+    "id": "141875",
+    "name": "塑心",
+    "name_cn": "塑心",
+    "role_type": "配角"
+  },
+  {
+    "id": "148339",
+    "name": "哈洛德",
+    "name_cn": "哈洛德",
+    "role_type": "配角"
+  },
+  {
+    "id": "149957",
+    "name": "烈夏",
+    "name_cn": "烈夏",
+    "role_type": "配角"
+  },
+  {
+    "id": "149958",
+    "name": "锏",
+    "name_cn": "锏",
+    "role_type": "配角"
+  },
+  {
+    "id": "150310",
+    "name": "温米",
+    "name_cn": "温米",
+    "role_type": "配角"
+  },
+  {
+    "id": "150311",
+    "name": "莱伊",
+    "name_cn": "莱伊",
+    "role_type": "配角"
+  },
+  {
+    "id": "152070",
+    "name": "黍",
+    "name_cn": "黍",
+    "role_type": "配角"
+  },
+  {
+    "id": "152071",
+    "name": "万顷",
+    "name_cn": "万顷",
+    "role_type": "配角"
+  },
+  {
+    "id": "152072",
+    "name": "小满",
+    "name_cn": "小满",
+    "role_type": "配角"
+  },
+  {
+    "id": "152073",
+    "name": "左乐",
+    "name_cn": "左乐",
+    "role_type": "配角"
+  },
+  {
+    "id": "152074",
+    "name": "红隼",
+    "name_cn": "红隼",
+    "role_type": "配角"
+  },
+  {
+    "id": "155206",
+    "name": "露托",
+    "name_cn": "露托",
+    "role_type": "配角"
+  },
+  {
+    "id": "155207",
+    "name": "奥达",
+    "name_cn": "奥达",
+    "role_type": "配角"
+  },
+  {
+    "id": "155208",
+    "name": "阿罗玛",
+    "name_cn": "阿罗玛",
+    "role_type": "配角"
+  },
+  {
+    "id": "155209",
+    "name": "阿斯卡纶",
+    "name_cn": "阿斯卡纶",
+    "role_type": "配角"
+  },
+  {
+    "id": "156679",
+    "name": "PhonoR-0",
+    "name_cn": "PhonoR-0",
+    "role_type": "配角"
+  },
+  {
+    "id": "156681",
+    "name": "魔王",
+    "name_cn": "魔王",
+    "role_type": "配角"
+  },
+  {
+    "id": "156682",
+    "name": "逻各斯",
+    "name_cn": "逻各斯",
+    "role_type": "配角"
+  },
+  {
+    "id": "159546",
+    "name": "深巡",
+    "name_cn": "深巡",
+    "role_type": "配角"
+  },
+  {
+    "id": "159547",
+    "name": "海霓",
+    "name_cn": "海霓",
+    "role_type": "配角"
+  },
+  {
+    "id": "159548",
+    "name": "乌尔比安",
+    "name_cn": "乌尔比安",
+    "role_type": "配角"
+  },
+  {
+    "id": "161211",
+    "name": "渡桥",
+    "name_cn": "渡桥",
+    "role_type": "配角"
+  },
+  {
+    "id": "161212",
+    "name": "妮芙",
+    "name_cn": "妮芙",
+    "role_type": "配角"
+  },
+  {
+    "id": "161579",
+    "name": "锡人",
+    "name_cn": "锡人",
+    "role_type": "配角"
+  },
+  {
+    "id": "163575",
+    "name": "蕾缪安",
+    "name_cn": "蕾缪安",
+    "role_type": "配角"
+  },
+  {
+    "id": "163810",
+    "name": "莎草",
+    "name_cn": "莎草",
+    "role_type": "配角"
+  },
+  {
+    "id": "163811",
+    "name": "衡沙",
+    "name_cn": "衡沙",
+    "role_type": "配角"
+  },
+  {
+    "id": "163813",
+    "name": "佩佩",
+    "name_cn": "佩佩",
+    "role_type": "配角"
+  },
+  {
+    "id": "165704",
+    "name": "凯瑟琳",
+    "name_cn": "凯瑟琳",
+    "role_type": "配角"
+  },
+  {
+    "id": "165705",
+    "name": "波卜",
+    "name_cn": "波卜",
+    "role_type": "配角"
+  },
+  {
+    "id": "166368",
+    "name": "忍冬",
+    "name_cn": "忍冬",
+    "role_type": "配角"
+  },
+  {
+    "id": "166518",
+    "name": "云迹",
+    "name_cn": "云迹",
+    "role_type": "配角"
+  },
+  {
+    "id": "166519",
+    "name": "菲莱",
+    "name_cn": "菲莱",
+    "role_type": "配角"
+  },
+  {
+    "id": "166520",
+    "name": "裁度",
+    "name_cn": "裁度",
+    "role_type": "配角"
+  },
+  {
+    "id": "166521",
+    "name": "荒芜拉普兰德",
+    "name_cn": "荒芜拉普兰德",
+    "role_type": "配角"
+  },
+  {
+    "id": "169463",
+    "name": "瑰盐",
+    "name_cn": "瑰盐",
+    "role_type": "配角"
+  },
+  {
+    "id": "169464",
+    "name": "特克诺",
+    "name_cn": "特克诺",
+    "role_type": "配角"
+  },
+  {
+    "id": "169465",
+    "name": "引星棘刺",
+    "name_cn": "引星棘刺",
+    "role_type": "配角"
+  },
+  {
+    "id": "170067",
+    "name": "余",
+    "name_cn": "余",
+    "role_type": "配角"
+  },
+  {
+    "id": "170523",
+    "name": "寻澜",
+    "name_cn": "寻澜",
+    "role_type": "配角"
+  },
+  {
+    "id": "170525",
+    "name": "行箸",
+    "name_cn": "行箸",
+    "role_type": "配角"
+  },
+  {
+    "id": "171445",
+    "name": "隐德来希",
+    "name_cn": "隐德来希",
+    "role_type": "配角"
+  },
+  {
+    "id": "171446",
+    "name": "诺威尔",
+    "name_cn": "诺威尔",
+    "role_type": "配角"
+  },
+  {
+    "id": "172513",
+    "name": "水灯心",
+    "name_cn": "水灯心",
+    "role_type": "配角"
+  },
+  {
+    "id": "172514",
+    "name": "钼铅",
+    "name_cn": "钼铅",
+    "role_type": "配角"
+  },
+  {
+    "id": "172515",
+    "name": "死芒",
+    "name_cn": "死芒",
+    "role_type": "配角"
+  },
+  {
+    "id": "173952",
+    "name": "阿兰娜",
+    "name_cn": "阿兰娜",
+    "role_type": "配角"
+  },
+  {
+    "id": "173953",
+    "name": "骋风",
+    "name_cn": "骋风",
+    "role_type": "配角"
+  },
+  {
+    "id": "175180",
+    "name": "新约能天使",
+    "name_cn": "新约能天使",
+    "role_type": "配角"
+  },
+  {
+    "id": "175181",
+    "name": "信仰搅拌机",
+    "name_cn": "信仰搅拌机",
+    "role_type": "配角"
+  },
+  {
+    "id": "175182",
+    "name": "聆音",
+    "name_cn": "聆音",
+    "role_type": "配角"
+  },
+  {
+    "id": "175183",
+    "name": "CONFESS-47",
+    "name_cn": "CONFESS-47",
+    "role_type": "配角"
+  },
+  {
+    "id": "65913",
+    "name": "陈",
+    "name_cn": "陈",
+    "role_type": "配角"
+  },
+  {
+    "id": "70167",
+    "name": "杜宾",
+    "name_cn": "杜宾",
+    "role_type": "配角"
+  },
+  {
+    "id": "70188",
+    "name": "安赛尔",
+    "name_cn": "安赛尔",
+    "role_type": "配角"
+  },
+  {
+    "id": "70191",
+    "name": "安德切尔",
+    "name_cn": "安德切尔",
+    "role_type": "配角"
+  },
+  {
+    "id": "70222",
+    "name": "米格鲁",
+    "name_cn": "米格鲁",
+    "role_type": "配角"
+  },
+  {
+    "id": "70223",
+    "name": "崖心",
+    "name_cn": "崖心",
+    "role_type": "配角"
+  },
+  {
+    "id": "70226",
+    "name": "阿消",
+    "name_cn": "阿消",
+    "role_type": "配角"
+  },
+  {
+    "id": "70234",
+    "name": "芬",
+    "name_cn": "芬",
+    "role_type": "配角"
+  },
+  {
+    "id": "70235",
+    "name": "缠丸",
+    "name_cn": "缠丸",
+    "role_type": "配角"
+  },
+  {
+    "id": "70237",
+    "name": "暗索",
+    "name_cn": "暗索",
+    "role_type": "配角"
+  },
+  {
+    "id": "70239",
+    "name": "卡缇",
+    "name_cn": "卡缇",
+    "role_type": "配角"
+  },
+  {
+    "id": "70242",
+    "name": "玫兰莎",
+    "name_cn": "玫兰莎",
+    "role_type": "配角"
+  },
+  {
+    "id": "70262",
+    "name": "白金",
+    "name_cn": "白金",
+    "role_type": "配角"
+  },
+  {
+    "id": "70264",
+    "name": "空爆",
+    "name_cn": "空爆",
+    "role_type": "配角"
+  },
+  {
+    "id": "70265",
+    "name": "巡林者",
+    "name_cn": "巡林者",
+    "role_type": "配角"
+  },
+  {
+    "id": "70266",
+    "name": "夜烟",
+    "name_cn": "夜烟",
+    "role_type": "配角"
+  },
+  {
+    "id": "70268",
+    "name": "12F",
+    "name_cn": "12F",
+    "role_type": "配角"
+  },
+  {
+    "id": "70269",
+    "name": "红豆",
+    "name_cn": "红豆",
+    "role_type": "配角"
+  },
+  {
+    "id": "70270",
+    "name": "夜刀",
+    "name_cn": "夜刀",
+    "role_type": "配角"
+  },
+  {
+    "id": "70272",
+    "name": "嘉维尔",
+    "name_cn": "嘉维尔",
+    "role_type": "配角"
+  },
+  {
+    "id": "70273",
+    "name": "深海色",
+    "name_cn": "深海色",
+    "role_type": "配角"
+  },
+  {
+    "id": "70275",
+    "name": "Lancet-2",
+    "name_cn": "Lancet-2",
+    "role_type": "配角"
+  },
+  {
+    "id": "70276",
+    "name": "地灵",
+    "name_cn": "地灵",
+    "role_type": "配角"
+  },
+  {
+    "id": "70279",
+    "name": "塞雷娅",
+    "name_cn": "塞雷娅",
+    "role_type": "配角"
+  },
+  {
+    "id": "70342",
+    "name": "白面鸮",
+    "name_cn": "白面鸮",
+    "role_type": "配角"
+  },
+  {
+    "id": "70343",
+    "name": "推进之王",
+    "name_cn": "推进之王",
+    "role_type": "配角"
+  },
+  {
+    "id": "70391",
+    "name": "守林人",
+    "name_cn": "守林人",
+    "role_type": "配角"
+  },
+  {
+    "id": "70393",
+    "name": "安洁莉娜",
+    "name_cn": "安洁莉娜",
+    "role_type": "配角"
+  },
+  {
+    "id": "70396",
+    "name": "霜叶",
+    "name_cn": "霜叶",
+    "role_type": "配角"
+  },
+  {
+    "id": "70397",
+    "name": "华法琳",
+    "name_cn": "华法琳",
+    "role_type": "配角"
+  },
+  {
+    "id": "70399",
+    "name": "伊芙利特",
+    "name_cn": "伊芙利特",
+    "role_type": "配角"
+  },
+  {
+    "id": "70405",
+    "name": "普罗旺斯",
+    "name_cn": "普罗旺斯",
+    "role_type": "配角"
+  },
+  {
+    "id": "70407",
+    "name": "闪灵",
+    "name_cn": "闪灵",
+    "role_type": "配角"
+  },
+  {
+    "id": "70410",
+    "name": "食铁兽",
+    "name_cn": "食铁兽",
+    "role_type": "配角"
+  },
+  {
+    "id": "70841",
+    "name": "诗怀雅",
+    "name_cn": "诗怀雅",
+    "role_type": "配角"
+  },
+  {
+    "id": "71013",
+    "name": "拉普兰德",
+    "name_cn": "拉普兰德",
+    "role_type": "配角"
+  },
+  {
+    "id": "71014",
+    "name": "凛冬",
+    "name_cn": "凛冬",
+    "role_type": "配角"
+  },
+  {
+    "id": "71015",
+    "name": "翎羽",
+    "name_cn": "翎羽",
+    "role_type": "配角"
+  },
+  {
+    "id": "71199",
+    "name": "星熊",
+    "name_cn": "星熊",
+    "role_type": "配角"
+  },
+  {
+    "id": "71481",
+    "name": "格劳克斯",
+    "name_cn": "格劳克斯",
+    "role_type": "配角"
+  },
+  {
+    "id": "72297",
+    "name": "麦哲伦",
+    "name_cn": "麦哲伦",
+    "role_type": "配角"
+  },
+  {
+    "id": "74871",
+    "name": "年",
+    "name_cn": "年",
+    "role_type": "配角"
+  },
+  {
+    "id": "74874",
+    "name": "雪雉",
+    "name_cn": "雪雉",
+    "role_type": "配角"
+  },
+  {
+    "id": "74875",
+    "name": "煌",
+    "name_cn": "煌",
+    "role_type": "配角"
+  },
+  {
+    "id": "76907",
+    "name": "风笛",
+    "name_cn": "风笛",
+    "role_type": "配角"
+  },
+  {
+    "id": "77998",
+    "name": "贾维",
+    "name_cn": "贾维",
+    "role_type": "配角"
+  },
+  {
+    "id": "91346",
+    "name": "夕",
+    "name_cn": "夕",
+    "role_type": "配角"
+  },
+  {
+    "id": "102398",
+    "name": "蚀清",
+    "name_cn": "蚀清",
+    "role_type": "配角"
+  },
+  {
+    "id": "102822",
+    "name": "桑葚",
+    "name_cn": "桑葚",
+    "role_type": "配角"
+  },
+  {
+    "id": "110585",
+    "name": "罗比菈塔",
+    "name_cn": "罗比菈塔",
+    "role_type": "配角"
+  },
+  {
+    "id": "113081",
+    "name": "见行者",
+    "name_cn": "见行者",
+    "role_type": "配角"
+  },
+  {
+    "id": "116896",
+    "name": "Ace",
+    "name_cn": "Ace",
+    "role_type": "配角"
+  },
+  {
+    "id": "119527",
+    "name": "伺夜",
+    "name_cn": "伺夜",
+    "role_type": "配角"
+  },
+  {
+    "id": "123477",
+    "name": "车尔尼",
+    "name_cn": "车尔尼",
+    "role_type": "配角"
+  },
+  {
+    "id": "123483",
+    "name": "极光",
+    "name_cn": "极光",
+    "role_type": "配角"
+  },
+  {
+    "id": "123485",
+    "name": "谜图",
+    "name_cn": "谜图",
+    "role_type": "配角"
+  },
+  {
+    "id": "125007",
+    "name": "百炼嘉维尔",
+    "name_cn": "百炼嘉维尔",
+    "role_type": "配角"
+  },
+  {
+    "id": "125016",
+    "name": "雪绒",
+    "name_cn": "雪绒",
+    "role_type": "配角"
+  },
+  {
+    "id": "125025",
+    "name": "黑键",
+    "name_cn": "黑键",
+    "role_type": "配角"
+  },
+  {
+    "id": "125031",
+    "name": "令",
+    "name_cn": "令",
+    "role_type": "配角"
+  },
+  {
+    "id": "125032",
+    "name": "夜半",
+    "name_cn": "夜半",
+    "role_type": "配角"
+  },
+  {
+    "id": "125035",
+    "name": "灵知",
+    "name_cn": "灵知",
+    "role_type": "配角"
+  },
+  {
+    "id": "125036",
+    "name": "耶拉",
+    "name_cn": "耶拉",
+    "role_type": "配角"
+  },
+  {
+    "id": "125056",
+    "name": "杰克",
+    "name_cn": "杰克",
+    "role_type": "配角"
+  },
+  {
+    "id": "70218",
+    "name": "塔露拉",
+    "name_cn": "塔露拉",
+    "role_type": "配角"
+  },
+  {
+    "id": "70455",
+    "name": "梅菲斯特",
+    "name_cn": "梅菲斯特",
+    "role_type": "配角"
+  },
+  {
+    "id": "70845",
+    "name": "魏彦吾",
+    "name_cn": "魏彦吾",
+    "role_type": "配角"
+  },
+  {
+    "id": "70846",
+    "name": "文月",
+    "name_cn": "文月",
+    "role_type": "配角"
+  },
+  {
+    "id": "70910",
+    "name": "浮士德",
+    "name_cn": "浮士德",
+    "role_type": "配角"
+  },
+  {
+    "id": "74235",
+    "name": "霜星",
+    "name_cn": "霜星",
+    "role_type": "配角"
+  },
+  {
+    "id": "77130",
+    "name": "碎骨",
+    "name_cn": "碎骨",
+    "role_type": "配角"
+  },
+  {
+    "id": "89234",
+    "name": "爱国者",
+    "name_cn": "爱国者",
+    "role_type": "配角"
+  },
+  {
+    "id": "89235",
+    "name": "阿丽娜",
+    "name_cn": "阿丽娜",
+    "role_type": "配角"
+  },
+  {
+    "id": "89236",
+    "name": "科西切",
+    "name_cn": "科西切",
+    "role_type": "配角"
+  },
+  {
+    "id": "89237",
+    "name": "特蕾西娅",
+    "name_cn": "特蕾西娅",
+    "role_type": "配角"
+  },
+  {
+    "id": "89238",
+    "name": "特雷西斯",
+    "name_cn": "特雷西斯",
+    "role_type": "配角"
+  },
+  {
+    "id": "89239",
+    "name": "鼠王",
+    "name_cn": "鼠王",
+    "role_type": "配角"
+  },
+  {
+    "id": "117894",
+    "name": "米莎",
+    "name_cn": "米莎",
+    "role_type": "配角"
+  },
+  {
+    "id": "117895",
+    "name": "Medic",
+    "name_cn": "Medic",
+    "role_type": "配角"
+  },
+  {
+    "id": "117896",
+    "name": "Guard",
+    "name_cn": "Guard",
+    "role_type": "配角"
+  },
+  {
+    "id": "119530",
+    "name": "德米特里·切塔尔多",
+    "name_cn": "德米特里·切塔尔多",
+    "role_type": "配角"
+  },
+  {
+    "id": "119531",
+    "name": "西西里夫人",
+    "name_cn": "西西里夫人",
+    "role_type": "配角"
+  },
+  {
+    "id": "119532",
+    "name": "文",
+    "name_cn": "文",
+    "role_type": "配角"
+  },
+  {
+    "id": "119533",
+    "name": "乔万娜·罗塞蒂",
+    "name_cn": "乔万娜·罗塞蒂",
+    "role_type": "配角"
+  },
+  {
+    "id": "121176",
+    "name": "丹布朗·莱奥帕尔迪",
+    "name_cn": "丹布朗·莱奥帕尔迪",
+    "role_type": "配角"
+  },
+  {
+    "id": "121177",
+    "name": "阿格尼尔",
+    "name_cn": "阿格尼尔",
+    "role_type": "配角"
+  },
+  {
+    "id": "126419",
+    "name": "泰拉大陆调查团",
+    "name_cn": "泰拉大陆调查团",
+    "role_type": "配角"
+  },
+  {
+    "id": "138403",
+    "name": "九",
+    "name_cn": "九",
+    "role_type": "配角"
+  },
+  {
+    "id": "142967",
+    "name": "Scout",
+    "name_cn": "Scout",
+    "role_type": "配角"
+  },
+  {
+    "id": "172601",
+    "name": "塞茜莉亚·拉珀尔塔",
+    "name_cn": "塞茜莉亚·拉珀尔塔",
+    "role_type": "配角"
+  },
+  {
+    "id": "26123",
+    "name": "罗小黑",
+    "name_cn": "罗小黑",
+    "role_type": "配角"
+  },
+  {
+    "id": "27601",
+    "name": "マルシル",
+    "name_cn": "マルシル",
+    "role_type": "配角"
+  },
+  {
+    "id": "39850",
+    "name": "ライオス",
+    "name_cn": "ライオス",
+    "role_type": "配角"
+  },
+  {
+    "id": "44473",
+    "name": "チルチャック",
+    "name_cn": "チルチャック",
+    "role_type": "配角"
+  },
+  {
+    "id": "55790",
+    "name": "センシ",
+    "name_cn": "センシ",
+    "role_type": "配角"
+  },
+  {
+    "id": "125033",
+    "name": "九色鹿",
+    "name_cn": "九色鹿",
+    "role_type": "配角"
+  },
+  {
+    "id": "125049",
+    "name": "灰烬",
+    "name_cn": "灰烬",
+    "role_type": "配角"
+  },
+  {
+    "id": "125050",
+    "name": "霜华",
+    "name_cn": "霜华",
+    "role_type": "配角"
+  },
+  {
+    "id": "125051",
+    "name": "闪击",
+    "name_cn": "闪击",
+    "role_type": "配角"
+  },
+  {
+    "id": "125052",
+    "name": "战车",
+    "name_cn": "战车",
+    "role_type": "配角"
+  },
+  {
+    "id": "65506",
+    "name": "Ash",
+    "name_cn": "Ash",
+    "role_type": "配角"
+  },
+  {
+    "id": "65519",
+    "name": "Tachanka",
+    "name_cn": "Tachanka",
+    "role_type": "配角"
+  },
+  {
+    "id": "65520",
+    "name": "Blitz",
+    "name_cn": "Blitz",
+    "role_type": "配角"
+  },
+  {
+    "id": "65525",
+    "name": "Frost",
+    "name_cn": "Frost",
+    "role_type": "配角"
+  },
+  {
+    "id": "91044",
+    "name": "塞壬唱片-MSR",
+    "name_cn": "塞壬唱片-MSR",
+    "role_type": "配角"
+  },
+  {
+    "id": "153771",
+    "name": "导火索",
+    "name_cn": "导火索",
+    "role_type": "配角"
+  },
+  {
+    "id": "153772",
+    "name": "双月",
+    "name_cn": "双月",
+    "role_type": "配角"
+  },
+  {
+    "id": "153773",
+    "name": "医生",
+    "name_cn": "医生",
+    "role_type": "配角"
+  },
+  {
+    "id": "153774",
+    "name": "艾拉",
+    "name_cn": "艾拉",
+    "role_type": "配角"
+  }
+]
