@@ -303,8 +303,23 @@ def get_arknights_operators():
                 
                 # 获取干员基础名称，用于合并不同职业形态的同一角色
                 base_name = name
+                
+                # 处理括号形式的变体，如"阿米娅（近卫）"
                 if "（" in name and "）" in name:
                     base_name = name.split("（")[0].strip()
+                
+                # 处理前缀形式的变体，如"圣约送葬人"，"浮现守林人"等
+                special_prefixes = ["圣约", "缄默", "承曦", "浮现", "濯尘", "寒芒", "百炼", "纯烬", "荒芜", "引星", "新约", 
+                                     "缤纷", "冷山", "灵活", "幽谷", "激进", "幽影", "闪耀","假日威龙"]
+                
+                for prefix in special_prefixes:
+                    if name.startswith(prefix) and len(name) > len(prefix):
+                        possible_base = name[len(prefix):]
+                        # 检查此基础名称是否存在于干员列表中
+                        if possible_base in operators:
+                            base_name = possible_base
+                            print(f"识别到变体: {name} -> 基础名称: {base_name}")
+                            break
                 
                 # 干员数据以名称为键
                 operators[name] = {
@@ -374,11 +389,72 @@ def match_characters_with_operators(bangumi_chars, arknights_ops):
     
     # 预处理：创建基础名称到所有变体的映射
     base_to_variants = {}
+    name_to_base = {}  # 添加名称到基础名称的映射，用于更精确的变体检测
+    
     for op_name, op_data in arknights_ops.items():
         base_name = op_data.get("基础名称", op_name)
         if base_name not in base_to_variants:
             base_to_variants[base_name] = []
-        base_to_variants[base_name].append(op_name)
+        
+        # 添加变体到列表中（如果不存在）
+        if op_name not in base_to_variants[base_name]:
+            base_to_variants[base_name].append(op_name)
+        
+        # 记录这个名称对应的基础名称
+        name_to_base[op_name] = base_name
+    
+    # 检测特殊的变体关系 - 使用预定义的变体映射
+    special_variants = {
+        "送葬人": ["圣约送葬人"],
+        "能天使": ["新约能天使"],
+        "阿米娅": ["阿米娅（近卫）", "阿米娅（医疗）"],
+        "拉普兰德": ["荒芜拉普兰德"],
+        "德克萨斯": ["缄默德克萨斯"],
+        "陈": ["假日威龙陈"],
+        "格雷伊": ["承曦格雷伊"],
+        "艾雅法拉": ["纯烬艾雅法拉"],
+        "棘刺": ["引星棘刺"],
+        "临光": ["耀骑士临光"],
+        "诗怀雅": ["琳琅诗怀雅"],
+        "杰西卡": ["涤火杰西卡"],
+        "夜刀": ["麒麟R夜刀"],
+        "黑角": ["火龙S黑角"],
+        "幽灵鲨": ["归溟幽灵鲨"],
+        "斯卡蒂": ["浊心斯卡蒂"],
+        "苇草": ["焰影苇草"]
+    }
+    
+    # 创建Bangumi角色名称集合，用于检查变体是否在Bangumi上已经分开
+    bangumi_char_names = {char["name_cn"] for char in bangumi_chars if char.get("name_cn")}
+    
+    # 根据Bangumi角色名称集合过滤变体映射
+    filtered_variants = {}
+    for base_name, variants in special_variants.items():
+        valid_variants = []
+        for variant in variants:
+            # 如果变体名称已在Bangumi中有独立条目，则不合并
+            if variant not in bangumi_char_names:
+                valid_variants.append(variant)
+            else:
+                print(f"不合并变体: {variant} 在Bangumi中已有独立条目")
+        
+        if valid_variants:
+            filtered_variants[base_name] = valid_variants
+    
+    # 应用过滤后的特殊变体映射
+    for base_name, variants in filtered_variants.items():
+        if base_name in base_to_variants:
+            # 将特殊变体添加到基础名称的变体列表中
+            for variant in variants:
+                if variant in arknights_ops and variant not in base_to_variants[base_name]:
+                    base_to_variants[base_name].append(variant)
+                    name_to_base[variant] = base_name
+                    print(f"添加特殊变体: {variant} -> {base_name}")
+    
+    # 打印变体映射信息，用于调试
+    for base_name, variants in base_to_variants.items():
+        if len(variants) > 1:
+            print(f"发现角色变体 - 基础名称: {base_name}, 变体: {variants}")
 
     # 处理每个Bangumi角色
     for char in bangumi_chars:
@@ -419,29 +495,59 @@ def match_characters_with_operators(bangumi_chars, arknights_ops):
             if base_name in base_to_variants:
                 matched_ops.extend(base_to_variants[base_name])
                 matched = True
+            else:
+                matched_ops.append(exact_match)
+                matched = True
         
         # 如果没有匹配到，尝试模糊匹配
         if not matched:
+            # 先检查名称是否有部分匹配
             for op_name, op_data in arknights_ops.items():
                 # 检查名称是否包含或被包含
                 if name in op_name or op_name in name:
+                    # 获取此干员的基础名称
                     base_name = op_data.get("基础名称", op_name)
+                    
+                    # 如果是变体，添加所有相关变体
                     if base_name in base_to_variants:
-                        # 添加所有变体
                         for variant in base_to_variants[base_name]:
                             if variant not in matched_ops:
                                 matched_ops.append(variant)
                     else:
-                        matched_ops.append(op_name)
+                        if op_name not in matched_ops:
+                            matched_ops.append(op_name)
+                    
                     matched = True
+        
+        # 如果找到了匹配，但不是全部变体，尝试查找更多可能的变体
+        if matched and len(matched_ops) > 0:
+            # 创建已匹配的基础名称集合
+            matched_base_names = set()
+            for op_name in matched_ops:
+                if op_name in name_to_base:
+                    matched_base_names.add(name_to_base[op_name])
             
+            # 检查是否有遗漏的变体
+            for base_name in matched_base_names:
+                for variant in base_to_variants.get(base_name, []):
+                    if variant not in matched_ops:
+                        print(f"找到遗漏的变体 - 角色: {name}, 添加变体: {variant}")
+                        matched_ops.append(variant)
+            
+        # 删除重复的干员名称
+        matched_ops = list(set(matched_ops))
+        
         # 处理匹配到的干员数据
         if matched_ops:
+            # 打印匹配信息，用于调试
+            if len(matched_ops) > 1:
+                print(f"角色 [{name}] 匹配到多个干员: {matched_ops}")
+                
             # 合并所有匹配到的干员数据
             for op_name in matched_ops:
                 op_data = arknights_ops[op_name]
                 
-                # 处理星级
+                # 处理星级 - 确保所有变体的稀有度都被保留
                 star_value = op_data["星级"]
                 star_image = f"<img src='/assets/tag/arknights/Star_Rating/{star_mapping.get(star_value, 'unknown')}.png' alt='{star_value}' />"
                 character_data["稀有度"][star_value] = star_image
@@ -511,31 +617,8 @@ def match_characters_with_operators(bangumi_chars, arknights_ops):
 
 
 def save_to_json(data, filename="extra_tags.json"):
-    """将数据保存为JSON文件，保留手动修改的数据"""
-    # 检查是否存在旧的数据文件
-    if os.path.exists(filename):
-        try:
-            # 加载旧的数据文件
-            with open(filename, 'r', encoding='utf-8-sig') as f:
-                old_data = json.load(f)
-                
-            # 合并数据：只替换包含"未知职业"的条目，保留其他手动修改
-            for char_id, char_info in old_data.items():
-                if char_id in data:
-                    # 检查是否为未映射的条目（含"未知职业"）
-                    if "未知职业" not in char_info["职业"]:
-                        # 如果不是未映射条目，保留手动修改
-                        data[char_id] = char_info
-                        print(f"保留手动修改的数据: ID {char_id}")
-                else:
-                    # 如果新数据中不存在此ID，也要保留
-                    data[char_id] = char_info
-                    
-            print(f"已合并手动修改的数据")
-        except Exception as e:
-            print(f"读取旧数据文件失败，无法保留手动修改: {e}")
-    
-    # 保存合并后的数据
+    """将数据保存为JSON文件"""
+    # 直接保存数据，不保留手动修改
     with open(filename, 'w', encoding='utf-8-sig') as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
     print(f"数据已保存到 {filename}")
@@ -548,7 +631,6 @@ def main():
     # 解析命令行参数
     parser = argparse.ArgumentParser(description='明日方舟角色数据爬虫')
     parser.add_argument('--offline', action='store_true', help='启用离线模式，使用本地缓存数据')
-    parser.add_argument('--refresh-all', action='store_true', help='刷新所有数据，不保留手动修改')
     args = parser.parse_args()
     
     OFFLINE_MODE = args.offline
@@ -557,9 +639,6 @@ def main():
         print("启用离线模式，将使用本地缓存数据")
     else:
         print("禁用离线模式，将从网络获取最新数据")
-        
-    if args.refresh_all:
-        print("警告: 将刷新所有数据，不保留手动修改!")
 
     print("开始获取Bangumi角色数据...")
     bangumi_characters = get_bangumi_characters()
@@ -592,15 +671,8 @@ def main():
     
     print(f"成功匹配 {len(matched_data)} 个角色")
 
-    # 根据参数决定是否保留手动修改
-    if args.refresh_all:
-        # 不保留手动修改，直接保存
-        with open("extra_tags.json", 'w', encoding='utf-8-sig') as f:
-            json.dump(matched_data, f, ensure_ascii=False, indent=2)
-        print("所有数据已刷新，未保留手动修改")
-    else:
-        # 保留手动修改
-        save_to_json(matched_data)
+    # 直接保存数据，不保留手动修改
+    save_to_json(matched_data)
 
 
 if __name__ == "__main__":
